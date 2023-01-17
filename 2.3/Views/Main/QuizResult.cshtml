@@ -1,0 +1,13 @@
+﻿@model _2._3.Models.ResultModel
+@{
+    ViewBag.Title = "Quiz";
+}
+
+<h2 class="SUB-NAME">Quiz results</h2>
+<h3>Right answers @Model.CorrectAnswerCount out @Model.Count</h3>
+<ol>
+    @foreach (var q in Model.Questions)
+    {
+            <li>@q.ToString() @q.UserAnswer</li>
+    }
+</ol>
